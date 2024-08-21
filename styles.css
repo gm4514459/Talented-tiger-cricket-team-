@@ -1,0 +1,117 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* Allows main to take up the available space */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #ff5733, #ffbd39); /* Gradient background from orange to yellow */
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff; /* White text for contrast */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-logo img {
+    height: 80px; /* Increased size for better visibility */
+    border-radius: 10px;
+    border: 2px solid #fff; /* White border around logo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* White text color */
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding: 5px 10px; /* Padding for better click area */
+}
+
+nav ul li a:hover {
+    color: #000; /* Dark text color on hover */
+    border-bottom: 2px solid #000; /* Underline effect on hover */
+}
+
+/* Footer Styles */
+footer {
+    background: #2c3e50; /* Dark color for contrast */
+    color: #ecf0f1; /* Light color text */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.footer-content .social-media {
+    margin-top: 10px;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #ecf0f1; /* Light color for icons */
+    margin: 0 10px;
+    font-size: 24px; /* Larger icons for better visibility */
+}
+
+.social-icon:hover {
+    color: #3498db; /* Change color on hover */
+}
+
+.section {
+    padding: 40px 20px;
+    background-color: #f5f5f5; /* Light grey background for sections */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+}

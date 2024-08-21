@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Players - Talented Tiger Cricket Team</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="team-logo">
+                <img src="PROFILE.jpeg" alt="Talented Tiger Cricket Team">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About TTCT</a></li>
+                    <li><a href="schedule.html">Next Match</a></li>
+                    <li><a href="rankings.html">Player Rankings</a></li>
+                    <li><a href="players.html">Meet Our Players</a></li>
+                    <li><a href="man-of-the-match.html">Man of the Match</a></li>
+                    <li><a href="map.html">Our Ground</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Players</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #8B0000; /* Off-red color */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .player-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .player-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .player-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transform: scale(1.02);
+        }
+
+        .player-card img {
+            width: 100%;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .player-card img:hover {
+            transform: scale(1.1);
+        }
+
+        .player-card p {
+            margin: 10px 0;
+            font-size: 22px;
+            color: #555;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #1e88e5;
+            margin: 0 8px;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #0d47a1;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .description {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            .player-card {
+                width: 260px;
+            }
+
+            .player-card img {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .player-card {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .player-card img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <?php include 'header.html'; ?>
+
+    <main>
+        <h1>Meet Our Players</h1>
+        <div class="player-container">
+            <!-- Player Cards -->
+            <div class="player-card" onclick="openModal('modal1')">
+                <img src="GHULAM MUSTAFA.jpg" alt="Ghulam Mustafa"width="1000" height="60000">
+                <p><strong>Ghulam Mustafa</strong> - Captain, Batsman</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/pg5jpbJGDxEtxFTW/?mibextid=qi2Omg"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://wa.me/03091967609?text=" target="_blank"><i class="fab fa-whatsapp"></i></a>
+       </div>
+            </div>
+                <div class="player-card" onclick="openModal('modal2')">
+                <img src="Abdul Hanan.jpg" alt="Abdul Hanan">
+                <p><strong>Abdul Hanan</strong> - Vice Captain, All-Rounder</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100011798876026"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/03056397587?text=" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="player-card" onclick="openModal('modal3')">
+                <img src="Talha Shahid.jpg" alt="Talha Shahid">
+                <p><strong>Talha Shahid</strong> - WK Batsman</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/talhashahid.shahid.980"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/03130499762?text=" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="player-card" onclick="openModal('modal4')">
+                <img src="ABUBAKAR ISHAQ.jpg" alt="Abubakar Ishaq">
+                <p><strong>Abubakar Ishaq</strong> - Batsman</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100086525371070"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/03187476609?text=" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="player-card" onclick="openModal('modal5')">
+                <img src="USAMA TARIQ.jpg" alt="Usama">
+                <p><strong>Usama</strong> - All-Rounder</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100039262086705"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/03187682603?text=" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="player-card" onclick="openModal('modal6')">
+                <img src="HUSNAIN ALI.jpg" alt="M Husnain">
+                <p><strong>M Husnain</strong> - Bowler</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61557742525750"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/03187476544?text=" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="player-card" onclick="openModal('modal7')">
+                <img src="M FARHAN.jpg" alt="Muhammed Farhan">
+                <p><strong>Muhammed Farhan</strong> - Bowler</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100069796604107"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/03006643652?text=" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="player-card" onclick="openModal('modal8')">
+                <img src="LALA.jpg" alt="Zeeshan Maqbool">
+                <p><strong>Zeeshan Matloob</strong> - All-Rounder</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/zeeshan48890"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/03099885200?text=" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="player-card" onclick="openModal('modal9')">
+                <img src="M QUMBEET.jpg" alt="Muhammed Qumbeet">
+                <p><strong>Muhammed Qumbeet</strong> - Bowler</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://wa.me/00000?text=" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="player-card" onclick="openModal('modal10')">
+                <img src="TALHA MAXI.jpg" alt="Talha Maxi">
+                <p><strong>Talha Maxi</strong> - WK Batsman</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100083253596588"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/03156012823?text=" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="player-card" onclick="openModal('modal11')">
+                <img src="M ZAIN.jpg" alt="N/A">
+                <p><strong>Muhammed Zain</strong> - Role OP Batsman</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/mzain.yaseen.7"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/03234178261?text=" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <img src="GHULAM MUSTAFA.jpg" alt="Ghulam Mustafa">
+            <div class="description">
+                <p><strong>Ghulam Mustafa</strong> - Captain, Batsman</p>
+                <p>Ghulam Mustafa is the captain of the team and a skilled batsman known for his strategic play and leadership.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <img src="Abdul Hanan.jpg" alt="Abdul Hanan">
+            <div class="description">
+                <p><strong>Abdul Hanan</strong> - Vice Captain, All-Rounder</p>
+                <p>Abdul Hanan is the vice captain and an all-rounder, essential for his versatility in both batting and bowling.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <img src="Talha Shahid.jpg" alt="Talha Shahid">
+            <div class="description">
+                <p><strong>Talha Shahid</strong> - WK Batsman</p>
+                <p>Talha Shahid is our wicketkeeper and batsman, known for his quick reflexes and reliable batting.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <img src="ABUBAKAR ISHAQ.jpg" alt="Abubakar Ishaq">
+            <div class="description">
+                <p><strong>Abubakar Ishaq</strong> - Batsman</p>
+                <p>Abubakar Ishaq is a top-order batsman with a knack for scoring quick runs and anchoring the innings.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <img src="USAMA TARIQ.jpg" alt="Usama">
+            <div class="description">
+                <p><strong>Usama</strong> - All-Rounder</p>
+                <p>Usama excels in both batting and bowling, making him a key player in all facets of the game.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">&times;</span>
+            <img src="HUSNAIN ALI.jpg" alt="M Husnain">
+            <div class="description">
+                <p><strong>M Husnain</strong> - Bowler</p>
+                <p>M Husnain is a fast bowler known for his pace and ability to take crucial wickets.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal7')">&times;</span>
+            <img src="M FARHAN.jpg" alt="Muhammed Farhan">
+            <div class="description">
+                <p><strong>Muhammed Farhan</strong> - Bowler</p>
+                <p>Muhammed Farhan is a versatile bowler with a range of deliveries to challenge any batsman.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal8')">&times;</span>
+            <img src="LALA.jpg" alt="Zeeshan Maqbool">
+            <div class="description">
+                <p><strong>Zeeshan Matbool</strong> - All-Rounder</p>
+                <p>Zeeshan Maqbool contributes with both bat and ball, offering balance to the team.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal9')">&times;</span>
+            <img src="M QUMBEET.jpg" alt="Muhammed Qumbeet">
+            <div class="description">
+                <p><strong>Muhammed Qumbeet</strong> - Bowler</p>
+                <p>Muhammed Qumbeet is a strategic bowler who can turn the game with his effective spells.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal10" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal10')">&times;</span>
+            <img src="TALHA MAXI.jpg" alt="Talha Maxi">
+            <div class="description">
+                <p><strong>TALHA MAXI</strong> - WK Batsman</p>
+                <p>Talha Maxi plays a crucial role as a wicketkeeper and provides solid batting performance.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal11" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal11')">&times;</span>
+            <img src="M ZAIN.jpg" alt="N/A">
+            <div class="description">
+                <p><strong>Muhammed Zain</strong> - OP Batsman</p>
+                <p>Zain is an exceptional batsman known for his explosive batting style and sheer dominance at the crease. With a natural flair for power-hitting and an impeccable technique, he consistently delivers match-winning performances. His ability to score quickly and decisively makes him a game-changer, and his aggressive approach keeps the opposition on their toes. Zain’s remarkable consistency and knack for performing under pressure solidify his role as a key player in the team.”</p>
+            </div>
+        </div>
+    </div>
+
+    <?php include 'footer.html'; ?>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+                    <!-- Add more player profiles as needed -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+<footer>
+        <div class="footer-content">
+            <p>Developed by <a href="https://www.facebook.com/share/pg5jpbJGDxEtxFTW/?mibextid=qi2Omg"> SE Ghulam Mustafa</p></A>
+            <H4>All Rights Reserved &copy; TTCT 2024-25</H4>
+            <div class="social-media">
+                <a href="https://facebook.com/https://www.facebook.com/share/pg5jpbJGDxEtxFTW/?mibextid=qi2Omg" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/ttct" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/ttct" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/company/ttct" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
